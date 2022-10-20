@@ -20,6 +20,7 @@ export const useFetch = ({url}: any) => {
     fetch(url)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data, 'datadata');
       
         seterror(data.error)
         dispatch(getCurrency(data))
