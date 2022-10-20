@@ -11,7 +11,10 @@ import { useAppSelector } from "../../hooks";
 
 export const Header = () => {
 
-    const currency = useAppSelector(state => state?.currency?.counts[0]?.currency)
+    const currency = useAppSelector(state => state)
+
+    console.log(currency, 'currency');
+    
    
 
     const url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json";
@@ -28,15 +31,15 @@ export const Header = () => {
                     </Typography>
                     <Typography variant="h6"
                         component="div" sx={{ flexGrow: 25, color: '#000000' }}>
-                        {1}€ = {currency && currency[32]?.rate}UAH
+                        {/* {1}€ = {currency && currency[32]?.rate}UAH */}
                     </Typography>
                     <Typography variant="h6"
                         component="div" sx={{ flexGrow: 30, color: '#000000' }}>
-                        {1}$ = {currency && currency[25]?.rate}UAH
+                        {/* {1}$ = {currency && currency[25]?.rate}UAH */}
                     </Typography>
                     <Typography variant="h6"
                         component="div" sx={{ flexGrow: 30, color: '#000000' }}>
-                        {1}£ = {currency && currency[24]?.rate}UAH
+                        {/* {1}£ = {currency && currency[24]?.rate}UAH */}
                     </Typography>
                 </Toolbar>
             </AppBar>
